@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>100文字英語日記</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+  <header>
+  <div class="header-logo">
+  <%= link_to("100文字英語日記","/")%>
+  </div>
+  <ul class="header-menus">
+    <li>
+    <%= link_to("100文字英語日記とは","/about")%>
+    </li>
+
+    <li>
+    <!-- ここにlink_toメソッドを用いて投稿一覧ページへのリンクを作成してください -->
+     <%= link_to("毎日の記録","/posts/index")%>
+  </li>
+
+  <li>
+  <!-- ここに新規投稿ページへのリンクを追加してください -->
+  <%= link_to("日記を書く", "/posts/new") %>
+</li>
+ 
+  </ul>
+</header>
+    <!-- 各ビューファイルは以下のyieldに代入され、application.html.erbの一部となる -->
+    <%= yield %>
+  </body>
+</html>
